@@ -1,0 +1,1085 @@
+{
+  "paragraphs": [
+    {
+      "text": "%pyspark\nprint sc.version\n",
+      "dateUpdated": "Mar 21, 2017 9:41:17 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1487792698166_465781658",
+      "id": "20170222-194458_900484301",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "2.0.2\n"
+      },
+      "dateCreated": "Feb 22, 2017 7:44:58 PM",
+      "dateStarted": "Mar 21, 2017 9:41:17 PM",
+      "dateFinished": "Mar 21, 2017 9:42:27 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%r\nx \u003c- this_line_causes_an_error\ndf \u003c- data.frame(col1\u003dc(1,2), col2\u003dc(3,4))\n#df",
+      "dateUpdated": "Feb 24, 2017 10:06:25 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1487792961139_-2125534477",
+      "id": "20170222-194921_526611756",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\n\u003cpre\u003e\u003ccode\u003eError in eval(expr, envir, enclos): object \u0027this_line_causes_an_error\u0027 not found\n\u003c/code\u003e\u003c/pre\u003e\n\n\n\n"
+      },
+      "dateCreated": "Feb 22, 2017 7:49:21 PM",
+      "dateStarted": "Feb 24, 2017 10:06:25 PM",
+      "dateFinished": "Feb 24, 2017 10:06:25 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%r\nx \u003c- this_line_causes_an_error\ndf \u003c- data.frame(col1\u003dc(1,2), col2\u003dc(3,4))\n\ndf",
+      "dateUpdated": "Feb 24, 2017 10:05:23 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1487792748817_-1377672915",
+      "id": "20170222-194548_1320651124",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nError in eval(expr, envir, enclos): object \u0027this_line_causes_an_error\u0027 not found\n\n\ncol1 col2\n1    1    3\n2    2    4\n\n\n\n"
+      },
+      "dateCreated": "Feb 22, 2017 7:45:48 PM",
+      "dateStarted": "Feb 24, 2017 10:05:23 PM",
+      "dateFinished": "Feb 24, 2017 10:05:55 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark.r\nlibrary(SparkR) \ndf \u003c- data.frame(col1 \u003d c(1,2)) \nsdf \u003c- as.DataFrame(df)\nhead(sdf)",
+      "dateUpdated": "Feb 27, 2017 10:58:45 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1487792914500_-231846363",
+      "id": "20170222-194834_854430633",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\ncol1\n1    1\n2    2\n\n\n\n"
+      },
+      "dateCreated": "Feb 22, 2017 7:48:34 PM",
+      "dateStarted": "Feb 27, 2017 10:58:45 PM",
+      "dateFinished": "Feb 27, 2017 10:58:58 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark.r\nlibrary(SparkR)\nsparkR.session()\ndata(iris)\ndf \u003c- createDataFrame(iris)\nnames(df)\nmodel \u003c- spark.kmeans(df, Sepal_Length ~ Sepal_Width)\nsummary(model)",
+      "dateUpdated": "Feb 24, 2017 10:07:35 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "col1",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "col1",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1487875519619_472209083",
+      "id": "20170223-184519_1571240139",
+      "result": {
+        "code": "ERROR",
+        "type": "TEXT",
+        "msg": "Interpreter JVM has stopped responding. This generally happens if spark driver has run out of memory.\nTry rerunning paragraph after increasing value of spark.driver.memory in interpreter settings page.\nDrop us a mail at help@qubole.com with notebook link for root cause analysis."
+      },
+      "dateCreated": "Feb 23, 2017 6:45:19 PM",
+      "dateStarted": "Feb 24, 2017 10:07:35 PM",
+      "dateFinished": "Feb 24, 2017 11:20:40 PM",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nprint sc.version",
+      "dateUpdated": "Feb 24, 2017 10:06:49 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1487875565130_76579944",
+      "id": "20170223-184605_1214879269",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "2.0.2\n"
+      },
+      "dateCreated": "Feb 23, 2017 6:46:05 PM",
+      "dateStarted": "Feb 24, 2017 10:06:49 PM",
+      "dateFinished": "Feb 24, 2017 10:06:49 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark.r\nlapply(1:3, function(x) x^2)",
+      "dateUpdated": "Feb 24, 2017 11:33:35 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1487973867443_592410723",
+      "id": "20170224-220427_941745364",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\n[[1]]\n[1] 1\n\n[[2]]\n[1] 4\n\n[[3]]\n[1] 9\n\n\n\n"
+      },
+      "dateCreated": "Feb 24, 2017 10:04:27 PM",
+      "dateStarted": "Feb 24, 2017 11:33:35 PM",
+      "dateFinished": "Feb 24, 2017 11:34:14 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nprint(sc.version)\nprint(sc.version)",
+      "dateUpdated": "Feb 27, 2017 6:45:19 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1487978417763_2078189429",
+      "id": "20170224-232017_262157179",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "2.0.2\n"
+      },
+      "dateCreated": "Feb 24, 2017 11:20:17 PM",
+      "dateStarted": "Feb 27, 2017 6:43:42 PM",
+      "dateFinished": "Feb 27, 2017 6:44:22 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%r\nlibrary(SparkR) \nsparkR.session() \ndoubled \u003c- sparkR:::lapply(1:10, function(x){2 * x}) \nprint(doubled)",
+      "dateUpdated": "Feb 27, 2017 10:20:37 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1488221022252_-395483055",
+      "id": "20170227-184342_1939841071",
+      "result": {
+        "code": "ERROR",
+        "type": "TEXT",
+        "msg": "Interpreter JVM has stopped responding. This generally happens if spark driver has run out of memory.\nTry rerunning paragraph after increasing value of spark.driver.memory in interpreter settings page.\nDrop us a mail at help@qubole.com with notebook link for root cause analysis."
+      },
+      "dateCreated": "Feb 27, 2017 6:43:42 PM",
+      "dateStarted": "Feb 27, 2017 10:20:37 PM",
+      "dateFinished": "Feb 27, 2017 10:25:20 PM",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark.r\nprint(spark)",
+      "dateUpdated": "Feb 27, 2017 9:46:07 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1488225034370_-1668753144",
+      "id": "20170227-195034_1785005943",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nJava ref type org.apache.spark.sql.SparkSession id 2 \n\n\n\n"
+      },
+      "dateCreated": "Feb 27, 2017 7:50:34 PM",
+      "dateStarted": "Feb 27, 2017 9:46:07 PM",
+      "dateFinished": "Feb 27, 2017 9:46:50 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%r\nprint(spark)",
+      "dateUpdated": "Feb 27, 2017 10:25:39 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1488231967692_-1809133492",
+      "id": "20170227-214607_1508162158",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nJava ref type org.apache.spark.sql.SparkSession id 2 \n\n\n\n"
+      },
+      "dateCreated": "Feb 27, 2017 9:46:07 PM",
+      "dateStarted": "Feb 27, 2017 10:25:39 PM",
+      "dateFinished": "Feb 27, 2017 10:26:11 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%r\ndoubled \u003c- lapply(1:10, function(x) 2*x)\nprint(doubled)",
+      "dateUpdated": "Feb 27, 2017 10:28:52 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1488234339012_-683956974",
+      "id": "20170227-222539_1414724706",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\n[[1]]\n[1] 2\n\n[[2]]\n[1] 4\n\n[[3]]\n[1] 6\n\n[[4]]\n[1] 8\n\n[[5]]\n[1] 10\n\n[[6]]\n[1] 12\n\n[[7]]\n[1] 14\n\n[[8]]\n[1] 16\n\n[[9]]\n[1] 18\n\n[[10]]\n[1] 20\n\n\n\n"
+      },
+      "dateCreated": "Feb 27, 2017 10:25:39 PM",
+      "dateStarted": "Feb 27, 2017 10:28:52 PM",
+      "dateFinished": "Feb 27, 2017 10:28:52 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "spark.lapply(list, func)",
+      "dateUpdated": "Feb 27, 2017 10:33:33 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1488234409368_-1740938823",
+      "id": "20170227-222649_589785909",
+      "result": {
+        "code": "ERROR",
+        "type": "TEXT",
+        "msg": "\u003cconsole\u003e:26: error: value lapply is not a member of org.apache.spark.sql.SparkSession\n       spark.lapply(list, func)\n             ^\n\u003cconsole\u003e:26: error: not found: value list\n       spark.lapply(list, func)\n                    ^\n\u003cconsole\u003e:26: error: not found: value func\n       spark.lapply(list, func)\n                          ^\n"
+      },
+      "dateCreated": "Feb 27, 2017 10:26:49 PM",
+      "dateStarted": "Feb 27, 2017 10:33:33 PM",
+      "dateFinished": "Feb 27, 2017 10:33:33 PM",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark.r\nlibrary(SparkR)\nsparkR.session()\ndoubled \u003c- SparkR::spark.lapply(1:10, function(x) 2*x)",
+      "dateUpdated": "Feb 27, 2017 10:46:30 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1488234813610_823190956",
+      "id": "20170227-223333_603480640",
+      "result": {
+        "code": "ERROR",
+        "type": "TEXT",
+        "msg": "Interpreter JVM has stopped responding. This generally happens if spark driver has run out of memory.\nTry rerunning paragraph after increasing value of spark.driver.memory in interpreter settings page.\nDrop us a mail at help@qubole.com with notebook link for root cause analysis."
+      },
+      "dateCreated": "Feb 27, 2017 10:33:33 PM",
+      "dateStarted": "Feb 27, 2017 10:46:30 PM",
+      "dateFinished": "Feb 27, 2017 10:55:29 PM",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nprint(spark.version)",
+      "dateUpdated": "Feb 27, 2017 10:48:28 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1488235566996_-959876130",
+      "id": "20170227-224606_1392918150",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "2.0.2\n"
+      },
+      "dateCreated": "Feb 27, 2017 10:46:06 PM",
+      "dateStarted": "Feb 27, 2017 10:48:28 PM",
+      "dateFinished": "Feb 27, 2017 10:48:36 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark.r\nlibrary(SparkR)\ndoubled \u003c- SparkR:::lapply(1:10, function(x) 2*x)\nprint(doubled)",
+      "dateUpdated": "Feb 27, 2017 11:00:22 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1488235723367_-1943832310",
+      "id": "20170227-224843_1087902553",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\n[[1]]\n[1] 2\n\n[[2]]\n[1] 4\n\n[[3]]\n[1] 6\n\n[[4]]\n[1] 8\n\n[[5]]\n[1] 10\n\n[[6]]\n[1] 12\n\n[[7]]\n[1] 14\n\n[[8]]\n[1] 16\n\n[[9]]\n[1] 18\n\n[[10]]\n[1] 20\n\n\n\n"
+      },
+      "dateCreated": "Feb 27, 2017 10:48:43 PM",
+      "dateStarted": "Feb 27, 2017 11:00:22 PM",
+      "dateFinished": "Feb 27, 2017 11:00:22 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark.r\nlibrary(SparkR) \ndoubled \u003c- xyz:::lapply(1:10, function(x) 2*x)\nprint(doubled)",
+      "dateUpdated": "Feb 27, 2017 11:04:12 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1488236244868_709746917",
+      "id": "20170227-225724_769379819",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nError in loadNamespace(name): there is no package called \u0027xyz\u0027\n\n\n[[1]]\n[1] 2\n\n[[2]]\n[1] 4\n\n[[3]]\n[1] 6\n\n[[4]]\n[1] 8\n\n[[5]]\n[1] 10\n\n[[6]]\n[1] 12\n\n[[7]]\n[1] 14\n\n[[8]]\n[1] 16\n\n[[9]]\n[1] 18\n\n[[10]]\n[1] 20\n\n\n\n"
+      },
+      "dateCreated": "Feb 27, 2017 10:57:24 PM",
+      "dateStarted": "Feb 27, 2017 11:04:12 PM",
+      "dateFinished": "Feb 27, 2017 11:04:12 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%r\nx \u003c- this_line_causes_an_error\ndf \u003c- data.frame(col1\u003dc(1,2), col2\u003dc(3,4))\ndf",
+      "dateUpdated": "Feb 27, 2017 11:12:13 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1488236523050_-350037088",
+      "id": "20170227-230203_701180649",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nError in eval(expr, envir, enclos): object \u0027this_line_causes_an_error\u0027 not found\n\n\ncol1 col2\n1    1    3\n2    2    4\n\n\n\n"
+      },
+      "dateCreated": "Feb 27, 2017 11:02:03 PM",
+      "dateStarted": "Feb 27, 2017 11:12:13 PM",
+      "dateFinished": "Feb 27, 2017 11:12:13 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark \nimport os\n\nenv_notebook_loc \u003d os.environ.get(\"FIRST_CLASS_NOTEBOOK_LOC\", \"\") \nprint env_notebook_loc",
+      "user": "sbadam@qubole.com",
+      "dateUpdated": "Mar 3, 2017 7:40:43 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1488237133301_-1299575472",
+      "id": "20170227-231213_1241853785",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "s3://qubole-sbadam/zeppelin/notebook\n"
+      },
+      "dateCreated": "Feb 27, 2017 11:12:13 PM",
+      "dateStarted": "Mar 3, 2017 7:40:43 PM",
+      "dateFinished": "Mar 3, 2017 7:40:43 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "import org.apache.spark.sql.types._\r\nimport org.apache.spark.sql.Row\r\nimport scala.collection.JavaConverters._\r\n\r\nval schema \u003d\r\n  StructType(\r\n    StructField(\"Total_Number_of_Rows\", IntegerType, false) ::\r\n    StructField(\"Interface_file_name\", StringType, true) :: Nil)\r\n\r\nval rows \u003d \r\n  List(\r\n    Row(5, \"Small1\"),\r\n    Row(5, \"Small2\"),\r\n    Row(5, \"NotSmall\")).asJava\r\n\r\nval dataFrame \u003d spark.createDataFrame(rows, schema)\r\ndataFrame.printSchema\r\ndataFrame.show()\r\n\r\n//dataFrame.write.mode(\"overwrite\").parquet(\"s3a://AKIAIPYNTUANXYQSM22Q:hIxnr82mS6irnOJYEvbRioq8Gasm4KmbR3JE8o5R@lmcfarlane/sparkhive/smalltest2\")\r\ndataFrame.write.mode(\"overwrite\").parquet(\"s3a://qubole-sbadam/shortdata-qubole-test3\")",
+      "dateUpdated": "Mar 6, 2017 6:24:26 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "group": "spark",
+          "values": [
+            "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2Fec2-54-147-141-77.compute-1.amazonaws.com%3A8088%2Fproxy%2Fapplication_1488824081610_0001/jobs/job?spark\u003dtrue\u0026id\u003d0"
+          ],
+          "interpreterSettingId": "2CCF3NK3W280811487792158913"
+        }
+      },
+      "jobName": "paragraph_1488569274662_-974246868",
+      "id": "20170303-192754_856918503",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "import org.apache.spark.sql.types._\nimport org.apache.spark.sql.Row\nimport scala.collection.JavaConverters._\nschema: org.apache.spark.sql.types.StructType \u003d StructType(StructField(Total_Number_of_Rows,IntegerType,false), StructField(Interface_file_name,StringType,true))\nrows: java.util.List[org.apache.spark.sql.Row] \u003d [[5,Small1], [5,Small2], [5,NotSmall]]\ndataFrame: org.apache.spark.sql.DataFrame \u003d [Total_Number_of_Rows: int, Interface_file_name: string]\nroot\n |-- Total_Number_of_Rows: integer (nullable \u003d false)\n |-- Interface_file_name: string (nullable \u003d true)\n\n+--------------------+-------------------+\n|Total_Number_of_Rows|Interface_file_name|\n+--------------------+-------------------+\n|                   5|             Small1|\n|                   5|             Small2|\n|                   5|           NotSmall|\n+--------------------+-------------------+\n\n"
+      },
+      "dateCreated": "Mar 3, 2017 7:27:54 PM",
+      "dateStarted": "Mar 6, 2017 6:24:27 PM",
+      "dateFinished": "Mar 6, 2017 6:25:46 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "spark.read.parquet(\"s3a://qubole-sbadam/shortdata-qubole-test3\").show()",
+      "dateUpdated": "Mar 6, 2017 6:27:51 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "group": "spark",
+          "values": [
+            "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2Fec2-54-147-141-77.compute-1.amazonaws.com%3A8088%2Fproxy%2Fapplication_1488824081610_0001/jobs/job?spark\u003dtrue\u0026id\u003d2",
+            "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2Fec2-54-147-141-77.compute-1.amazonaws.com%3A8088%2Fproxy%2Fapplication_1488824081610_0001/jobs/job?spark\u003dtrue\u0026id\u003d3",
+            "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2Fec2-54-147-141-77.compute-1.amazonaws.com%3A8088%2Fproxy%2Fapplication_1488824081610_0001/jobs/job?spark\u003dtrue\u0026id\u003d4"
+          ],
+          "interpreterSettingId": "2CCF3NK3W280811487792158913"
+        }
+      },
+      "jobName": "paragraph_1488824666964_30707128",
+      "id": "20170306-182426_922075855",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "+--------------------+-------------------+\n|Total_Number_of_Rows|Interface_file_name|\n+--------------------+-------------------+\n|                   5|           NotSmall|\n|                   5|             Small1|\n|                   5|             Small2|\n+--------------------+-------------------+\n\n"
+      },
+      "dateCreated": "Mar 6, 2017 6:24:26 PM",
+      "dateStarted": "Mar 6, 2017 6:26:43 PM",
+      "dateFinished": "Mar 6, 2017 6:26:46 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql create external table if not exists  dummyTest11small5 (`Total_Number_of_Rows` int,`Interface_file_name` string)  stored as parquet location \u0027s3://qubole-sbadam/shortdata-qubole-test3\u0027",
+      "dateUpdated": "Mar 6, 2017 6:40:57 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "group": "spark",
+          "values": [
+            "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2Fec2-54-147-141-77.compute-1.amazonaws.com%3A8088%2Fproxy%2Fapplication_1488824081610_0001/jobs/job?spark\u003dtrue\u0026id\u003d17"
+          ],
+          "interpreterSettingId": "2CCF3NK3W280811487792158913"
+        }
+      },
+      "jobName": "paragraph_1488824792327_-1612369889",
+      "id": "20170306-182632_1881863860",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": ""
+      },
+      "dateCreated": "Mar 6, 2017 6:26:32 PM",
+      "dateStarted": "Mar 6, 2017 6:40:57 PM",
+      "dateFinished": "Mar 6, 2017 6:40:57 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql select * from dummyTest11small5",
+      "dateUpdated": "Mar 6, 2017 6:41:00 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "group": "spark",
+          "values": [
+            "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2Fec2-54-147-141-77.compute-1.amazonaws.com%3A8088%2Fproxy%2Fapplication_1488824081610_0001/jobs/job?spark\u003dtrue\u0026id\u003d18",
+            "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2Fec2-54-147-141-77.compute-1.amazonaws.com%3A8088%2Fproxy%2Fapplication_1488824081610_0001/jobs/job?spark\u003dtrue\u0026id\u003d19"
+          ],
+          "interpreterSettingId": "2CCF3NK3W280811487792158913"
+        }
+      },
+      "jobName": "paragraph_1488824863123_-640047599",
+      "id": "20170306-182743_1869002473",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "total_number_of_rows\tinterface_file_name\nnull\tnull\nnull\tnull\nnull\tnull\n"
+      },
+      "dateCreated": "Mar 6, 2017 6:27:43 PM",
+      "dateStarted": "Mar 6, 2017 6:41:00 PM",
+      "dateFinished": "Mar 6, 2017 6:41:01 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql create external table if not exists  dummyTest11small4 (`Total_Number_of_Rows` int,`Interface_file_name` string)  stored as parquet location \u0027s3://qubole-sbadam/shortdata-qubole-test3\u0027",
+      "dateUpdated": "Mar 6, 2017 6:30:08 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "group": "spark",
+          "values": [
+            "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2Fec2-54-147-141-77.compute-1.amazonaws.com%3A8088%2Fproxy%2Fapplication_1488824081610_0001/jobs/job?spark\u003dtrue\u0026id\u003d14"
+          ],
+          "interpreterSettingId": "2CCF3NK3W280811487792158913"
+        }
+      },
+      "jobName": "paragraph_1488824889007_2076710358",
+      "id": "20170306-182809_519627610",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": ""
+      },
+      "dateCreated": "Mar 6, 2017 6:28:09 PM",
+      "dateStarted": "Mar 6, 2017 6:30:08 PM",
+      "dateFinished": "Mar 6, 2017 6:30:09 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql select * from dummyTest11small4",
+      "dateUpdated": "Mar 6, 2017 6:30:12 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "total_number_of_rows",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "interface_file_name",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "total_number_of_rows",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "interface_file_name",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "group": "spark",
+          "values": [
+            "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2Fec2-54-147-141-77.compute-1.amazonaws.com%3A8088%2Fproxy%2Fapplication_1488824081610_0001/jobs/job?spark\u003dtrue\u0026id\u003d15",
+            "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2Fec2-54-147-141-77.compute-1.amazonaws.com%3A8088%2Fproxy%2Fapplication_1488824081610_0001/jobs/job?spark\u003dtrue\u0026id\u003d16"
+          ],
+          "interpreterSettingId": "2CCF3NK3W280811487792158913"
+        }
+      },
+      "jobName": "paragraph_1488824953476_1930798579",
+      "id": "20170306-182913_1320251536",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "total_number_of_rows\tinterface_file_name\nnull\tnull\nnull\tnull\nnull\tnull\n"
+      },
+      "dateCreated": "Mar 6, 2017 6:29:13 PM",
+      "dateStarted": "Mar 6, 2017 6:30:12 PM",
+      "dateFinished": "Mar 6, 2017 6:30:14 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql show table dummyTest11small5",
+      "dateUpdated": "Mar 6, 2017 7:53:03 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1488824977060_-1238916101",
+      "id": "20170306-182937_1830407631",
+      "result": {
+        "code": "ERROR",
+        "type": "TEXT",
+        "msg": "org.apache.spark.sql.catalyst.parser.ParseException: \nmissing \u0027FUNCTIONS\u0027 at \u0027dummyTest11small5\u0027(line 1, pos 11)\n\n\u003d\u003d SQL \u003d\u003d\nshow table dummyTest11small5\n-----------^^^\n\n\tat org.apache.spark.sql.catalyst.parser.ParseException.withCommand(ParseDriver.scala:197)\n\tat org.apache.spark.sql.catalyst.parser.AbstractSqlParser.parse(ParseDriver.scala:99)\n\tat org.apache.spark.sql.execution.SparkSqlParser.parse(SparkSqlParser.scala:45)\n\tat org.apache.spark.sql.catalyst.parser.AbstractSqlParser.parsePlan(ParseDriver.scala:53)\n\tat org.apache.spark.sql.SparkSession.sql(SparkSession.scala:582)\n\tat org.apache.spark.sql.SQLContext.sql(SQLContext.scala:682)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:606)\n\tat org.apache.zeppelin.spark.SparkSqlInterpreter.interpret(SparkSqlInterpreter.java:159)\n\tat org.apache.zeppelin.interpreter.ClassloaderInterpreter.interpret(ClassloaderInterpreter.java:57)\n\tat org.apache.zeppelin.interpreter.LazyOpenInterpreter.interpret(LazyOpenInterpreter.java:102)\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:316)\n\tat org.apache.zeppelin.scheduler.Job.run(Job.java:182)\n\tat org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:160)\n\tat java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)\n\tat java.util.concurrent.FutureTask.run(FutureTask.java:262)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:178)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:292)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)\n\tat java.lang.Thread.run(Thread.java:745)\n"
+      },
+      "dateCreated": "Mar 6, 2017 6:29:37 PM",
+      "dateStarted": "Mar 6, 2017 7:53:05 PM",
+      "dateFinished": "Mar 6, 2017 7:53:42 PM",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\ndesc  sfo_table",
+      "dateUpdated": "Mar 7, 2017 12:15:22 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "col_name",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "data_type",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "col_name",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "data_type",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "group": "spark",
+          "values": [
+            "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2Fec2-54-147-141-77.compute-1.amazonaws.com%3A8088%2Fproxy%2Fapplication_1488824081610_0004/jobs/job?spark\u003dtrue\u0026id\u003d2"
+          ],
+          "interpreterSettingId": "2CCF3NK3W280811487792158913"
+        }
+      },
+      "jobName": "paragraph_1488829983121_-2025682456",
+      "id": "20170306-195303_1786103251",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "col_name\tdata_type\tcomment\nitinid\tstring\tnull\nmktid\tstring\tnull\nseqnum\tstring\tnull\ncoupons\tstring\tnull\nyear\tstring\tnull\nquarter\tstring\tnull\norigin\tstring\tnull\noriginaptind\tstring\tnull\norigincitynum\tstring\tnull\norigincountry\tstring\tnull\noriginstatefips\tstring\tnull\noriginstate\tstring\tnull\noriginstatename\tstring\tnull\noriginwac\tstring\tnull\ndest\tstring\tnull\ndestaptind\tstring\tnull\ndestcitynum\tstring\tnull\ndestcountry\tstring\tnull\ndeststatefips\tstring\tnull\ndeststate\tstring\tnull\ndeststatename\tstring\tnull\ndestwac\tstring\tnull\nbreak\tstring\tnull\ncoupontype\tstring\tnull\ntkcarrier\tstring\tnull\nopcarrier\tstring\tnull\nrpcarrier\tstring\tnull\npassengers\tstring\tnull\nfareclass\tstring\tnull\ndistance\tstring\tnull\ndistancegroup\tstring\tnull\ngateway\tstring\tnull\nitingeotype\tstring\tnull\ncoupongeotype\tstring\tnull\n"
+      },
+      "dateCreated": "Mar 6, 2017 7:53:03 PM",
+      "dateStarted": "Mar 7, 2017 12:15:22 AM",
+      "dateFinished": "Mar 7, 2017 12:15:23 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1488835975793_1554170666",
+      "id": "20170306-213255_599134290",
+      "dateCreated": "Mar 6, 2017 9:32:55 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Spark202",
+  "id": "4NQKGUAKT41487792695",
+  "angularObjects": {
+    "2CCF3NK3W280811487792158913": [],
+    "2C8TSSKWX280811487792159096": [],
+    "2CCANJ3U5280811487792159091": [],
+    "2CANUZT6P280811487792159087": []
+  },
+  "config": {},
+  "info": {},
+  "source": "FCN"
+}
